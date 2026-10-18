@@ -1,0 +1,44 @@
+.banner {
+  width: 100%;
+  height: clamp(96px, 18vw, 200px);   /* fluid height with min and max */
+  background: #132f5b;
+  display: flex;
+  justify-content: center;            /* keeps the lines centred */
+  overflow: hidden;
+}
+
+.waves {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.wave {
+  fill: none;
+  stroke: #d9a232;
+  stroke-width: 4;                    /* in viewBox units, so it scales */
+  stroke-linecap: round;
+  stroke-dasharray: 1;                /* pathLength="1" makes this length-independent */
+  stroke-dashoffset: 1;
+  animation: draw 1.6s ease-out forwards;
+  transform-box: fill-box;            /* pivot relative to the shape itself */
+  transform-origin: 50% 0;            /* top centre of each line */
+}
+
+.wave-2 { animation-delay: 0.2s; }
+
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes sway {
+  from { transform: rotate(-1.2deg); }
+  to   { transform: rotate(1.2deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .wave-1 { animation: draw 1.6s ease-out forwards, sway 5s ease-in-out 1.6s infinite alternate; }
+  .wave-2 { animation: draw 1.6s ease-out 0.2s forwards, sway 6s ease-in-out 1.8s infinite alternate; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave { animation: none; stroke-dashoffset: 0; }
+}
