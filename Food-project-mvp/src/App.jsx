@@ -1,18 +1,15 @@
 
+import Main_page from "./Main_page/Main_page.jsx";
 import WavyBanner from "./Banner/WavyBanner.jsx";
 import Header from "./Nav_bar/Header.jsx";
-import ChefDisplay from "./Chef_display/chef_display.jsx";
-import Features from "./Features/Features.jsx";
-import Categories from "./Categories/Categories.jsx"
-import About from "./About/About.jsx"
+import About from "./About/About.jsx";
 function App() {
     return (
         <>
-            <WavyBanner />
-            <Header />
-            <ChefDisplay />
-            <Features/>
-            <Categories/>
+            <WavyBanner/>
+            <Header/>
+            <Main_page/>
+            
             <About/>
         </>
     );

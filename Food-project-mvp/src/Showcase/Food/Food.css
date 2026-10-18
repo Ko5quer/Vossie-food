@@ -1,0 +1,35 @@
+.food-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  aspect-ratio: 3 / 2; /* matches the original collage proportions */
+}
+
+.food-collage__cell {
+  margin: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.food-collage__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stack on small phones so each photo stays readable */
+@media (max-width: 480px) {
+  .food-collage {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+  }
+
+  .food-collage__cell {
+    aspect-ratio: 3 / 2;
+  }
+}
