@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500&family=Montserrat:wght@700&display=swap");
+
+.lasagna {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 95px 24px 40px;
+  background: #162f5e;
+  color: #fff;
+  text-align: center;
+}
+
+.lasagna__swirl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 470px;
+  width: auto;
+  pointer-events: none;
+}
+
+.lasagna__img {
+  position: relative;
+  width: 380px;
+  max-width: 100%;
+  height: 253px;
+  object-fit: cover;
+  border-radius: 60px;
+}
+
+.lasagna__title {
+  position: relative;
+  margin: 48px 0 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #d4a02c;
+}
+
+.lasagna__text {
+  position: relative;
+  max-width: 490px;
+  margin: 0;
+  font-family: "Hind", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* small gold stroke at the bottom edge, where the next swirl begins */
+.lasagna__tick {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  height: 14px;
+  background: #d4a02c;
+  border-radius: 2px;
+  transform: rotate(8deg);
+}
+
+@media (max-width: 520px) {
+  .lasagna {
+    padding-top: 60px;
+  }
+
+  .lasagna__img {
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: 44px;
+  }
+
+  .lasagna__title {
+    font-size: 24px;
+  }
+
+  .lasagna__text {
+    font-size: 16px;
+  }
+}

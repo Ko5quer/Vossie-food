@@ -6,7 +6,7 @@
   max-width: 900px;
   margin: 0 auto;
   background: #fff;
-  aspect-ratio: 3 / 2; /* matches the original collage proportions */
+  aspect-ratio: 2 / 2; /* matches the original collage proportions */
 }
 
 .food-collage__cell {
@@ -30,6 +30,6 @@
   }
 
   .food-collage__cell {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 2 / 2;
   }
 }

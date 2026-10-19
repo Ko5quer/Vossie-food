@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500&family=Montserrat:wght@700&display=swap");
+
+.dish {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 45px 24px 40px;
+  background: #162f5e;
+  color: #fff;
+  text-align: center;
+}
+
+.dish__swirl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.dish__swirl path {
+  stroke: #d4a02c;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+/* sits above the swirl so the line passes behind the photo */
+.dish__img {
+  position: relative;
+  width: 412px;
+  max-width: 100%;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 70px;
+}
+
+.dish__title {
+  position: relative;
+  margin: 40px 0 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #d4a02c;
+}
+
+.dish__text {
+  position: relative;
+  max-width: 470px;
+  margin: 0;
+  font-family: "Hind", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.dish__tick {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  height: 14px;
+  background: #d4a02c;
+  border-radius: 2px;
+  transform: rotate(8deg);
+}
+
+@media (max-width: 520px) {
+  .dish__img {
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: 44px;
+  }
+
+  .dish__title {
+    font-size: 24px;
+  }
+
+  .dish__text {
+    font-size: 16px;
+  }
+}

@@ -1,12 +1,17 @@
-import "./FoodCollage.css";
+import "./Food.css";
+import "./Food.css";
 
-// Replace these with your own image imports or paths, e.g.
-// import tarts from "../assets/tarts.jpg";
+import pexels_1 from "./pexels_1.jpg";
+import pexels_2 from "./pexels_2.jpg";
+import pexels_3 from "./pexels_3.jpg";
+import pexels_4 from "./pexels_4.jpg";
+
+
 const defaultImages = [
-  { src: "/images/tarts.jpg", alt: "Mini tarts and citrus desserts on white plates" },
-  { src: "/images/pate-apple.jpg", alt: "Pâté on apple crisps with pomegranate seeds" },
-  { src: "/images/speckled-bowl.jpg", alt: "Plated starter in a speckled grey bowl" },
-  { src: "/images/green-plate.jpg", alt: "Salmon with greens on a green speckled plate" },
+  { src: pexels_1, alt: "Mini tarts and citrus desserts on white plates" },
+  { src: pexels_2, alt: "Pâté on apple crisps with pomegranate seeds" },
+  { src: pexels_3, alt: "Plated starter in a speckled grey bowl" },
+  { src: pexels_4, alt: "Salmon with greens on a green speckled plate" },
 ];
 
 export default function FoodCollage({ images = defaultImages }) {
