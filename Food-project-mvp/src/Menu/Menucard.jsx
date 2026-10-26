@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function MenuCard({ image, title, description, price, onAdd }) {
   return (
     <article className="menu-card">

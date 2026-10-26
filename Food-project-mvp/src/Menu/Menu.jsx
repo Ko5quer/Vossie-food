@@ -43,8 +43,14 @@ const items = [
   // add more objects here and new cards appear automatically
 ];
 
-export default function Menu() {
-  const handleAdd = (item) => console.log("Added to cart:", item);
+export default function Menu({ onAdd }) {
+  const handleAdd = (item) =>
+    onAdd({
+      id: item.id,
+      name: item.title,
+      image: item.image,
+      price: item.price,
+    });
 
   return (
     <MenuSection>

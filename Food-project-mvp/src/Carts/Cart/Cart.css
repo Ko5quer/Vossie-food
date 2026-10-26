@@ -1,0 +1,125 @@
+.cart {
+  --navy: #12305a;
+  --gold: #d6a02b;
+  --cream: #ebd8ae;
+  --cart-columns: 1.4fr 1fr 1fr 1fr;
+
+  background: var(--cream);
+  border: 3px solid var(--navy);
+  border-top: 0;
+  font-family: "Montserrat Alternates", "Montserrat", system-ui, sans-serif;
+  color: var(--navy);
+  box-sizing: border-box;
+}
+
+.cart__list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 24px 16px;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: var(--cart-columns);
+  align-items: center;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* Product: round photo with the name beneath it */
+.cart-row__product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-row__image {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.cart-row__name {
+  margin: 0;
+  max-width: 150px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.cart-row__price,
+.cart-row__total {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Quantity pill */
+.qty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: center;
+  width: 88px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #fff;
+  font-weight: 700;
+}
+
+.qty__btn {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.qty__btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.qty__btn:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 1px;
+}
+
+.qty__value {
+  min-width: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cart__empty {
+  margin: 0;
+  padding: 48px 24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .cart__list {
+    padding: 8px 12px 16px;
+  }
+
+  .cart-row__image {
+    width: 72px;
+    height: 72px;
+  }
+
+  .cart-row__name {
+    font-size: 11px;
+  }
+
+  .qty {
+    width: 76px;
+  }
+}

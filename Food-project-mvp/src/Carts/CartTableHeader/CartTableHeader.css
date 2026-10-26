@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap");
+
+.cart-header {
+  --navy: #12305a;
+  --gold: #d6a02b;
+
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  align-items: end;
+  text-align: center;
+  min-height: 162px;
+  padding: 0 24px 12px;
+  background: var(--navy);
+  color: var(--gold);
+  font-family: "Montserrat Alternates", "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.cart-header__cell {
+  padding: 0 8px;
+}
+
+@media (max-width: 480px) {
+  .cart-header {
+    min-height: 120px;
+    padding: 0 12px 12px;
+    font-size: 15px;
+  }
+}
