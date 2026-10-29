@@ -39,14 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'accounts',
-    'carts',
-    'orders',
-    'products',
+    'corsheaders',
+    'marketplace',
     
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -133,14 +132,18 @@ MAILERS = {
     },
 }
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.TokenAuthentication",
-    ],
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",
-    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication'],
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
 }
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+# Put the address your React app runs on (Vite is 5173, Create React App is 3000)
+CORS_ALLOWED_ORIGINS = [
+    'https://vossie-food.vercel.app',
+    'http://localhost:5173',   # your local React dev server
+]
+CSRF_TRUSTED_ORIGINS = ['https://culinarycart.duckdns.org']
+ALLOWED_HOSTS=culinarycart.duckdns.org
